@@ -84,8 +84,6 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -la'
-alias ..='cd ..'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -108,14 +106,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-alias gemi='gem install --no-ri --no-rdoc'
-alias gemu='gem uninstall'
-alias slt='sublime-text-2'
-alias gst='git status'
-alias gco='git checkout'
-alias gd='git diff'
-alias gb='git branch'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
