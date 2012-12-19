@@ -1,0 +1,11 @@
+[user]
+  name    = Marc Anguera Insa
+  email   = srmarc.ai@gmail.com
+[github]
+  user    = markets
+[color]
+  ui      = true
+[alias]
+  l       = log --pretty=oneline --abbrev-commit
+  fp      = format-patch
+  lg      = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
