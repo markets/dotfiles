@@ -110,16 +110,16 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 function rvm_version {
-  local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
-  [ "$gemset" != "" ] && gemset="$gemset"
-  local version=$(echo $MY_RUBY_HOME | awk -F'rubies/' '{print $2}')
-  [ "$version" != "" ] && version="$version@"
-  local full="$version$gemset"
-  [ "$full" != "" ] && echo "$full "
+    local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
+    [ "$gemset" != "" ] && gemset="$gemset"
+    local version=$(echo $MY_RUBY_HOME | awk -F'rubies/' '{print $2}')
+    [ "$version" != "" ] && version="$version@"
+    local full="$version$gemset"
+    [ "$full" != "" ] && echo "$full "
 }
 
 function parse_git_branch () {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
 RED="\[\033[0;31m\]"
