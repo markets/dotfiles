@@ -22,3 +22,6 @@ alias gst='git status'
 alias gco='git checkout'
 alias gd='git diff'
 alias gb='git branch'
+
+alias jks='jekyll server -w'
+alias jkb='jekyll build'
