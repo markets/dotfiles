@@ -5,6 +5,8 @@
   user    = markets
 [color]
   ui      = true
+[core]
+  excludesfile = /Users/markets/.gitignore_global
 [alias]
   st      = status
   ci      = commit
@@ -13,3 +15,7 @@
   df      = diff
   cl      = clone
   lg      = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[push]
+  default = simple
+[pull]
+  default = simple
