@@ -40,4 +40,4 @@ CYAN='\e[0;36m'
 RESET='\e[0m'
 
 # prompt style
-export PS1="$GREEN\$(ruby_version)$RESET \u: \w$CYAN\$(__git_ps1)$RED\$(git_dirty)$RESET\$ "
+export PS1="$YELLOW\$(ruby_version)$RESET \u: \w$CYAN\$(__git_ps1)$RED\$(git_dirty)$RESET\$ "

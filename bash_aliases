@@ -17,6 +17,7 @@ alias gemu='gem uninstall'
 alias b='bundle'
 alias be='bundle exec'
 alias bi='bundle install'
+alias bu='bundle update'
 
 alias jks='jekyll server -w'
 alias jkb='jekyll build'
