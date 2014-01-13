@@ -1,12 +1,11 @@
 # load aliases
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
+source ~/.bash_aliases
 
 # load git completion
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
+source ~/.git-completion.bash
+
+# load git prompt
+source ~/.git-prompt.sh
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:/usr/local/bin:$PATH"
@@ -16,9 +15,6 @@ eval "$(rbenv init -)"
 function ruby_version {
   rbenv version-name
 }
-
-# load git prompt
-source ~/.git-prompt.sh
 
 # git dirty
 function git_dirty {

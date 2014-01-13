@@ -1,15 +1,19 @@
 alias df='df -h' # humanize sizes
 alias cp='cp -i' # confirm before overwrite
 alias hi='history | tail -20'
+alias reload!='. ~/.bash_profile'
 
 alias l='ls -laGFh'
 alias ..='cd ..'
 alias ...='cd ../..'
 
+alias r='ruby'
+
 alias gst='git status'
 alias gco='git checkout'
 alias gd='git diff'
 alias gb='git branch'
+alias gs='git show'
 
 alias rs='rails s'
 alias rc='rails c'
