@@ -4,6 +4,9 @@
 [github]
   user    = markets
 [color]
+  diff    = auto
+  status  = auto
+  branch  = auto
   ui      = true
 [core]
   excludesfile = /Users/markets/.gitignore_global

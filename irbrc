@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 ### Load plugins
 %w{rubygems pp irb/completion irb/ext/save-history}.each do |lib|
   begin
@@ -11,7 +13,7 @@ end
 ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 
 ### History
-IRB.conf[:SAVE_HISTORY] = 200
+IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
 IRB.conf[:AUTO_INDENT] = true
@@ -25,29 +27,17 @@ def ls
   %x{ls}.split("\n")
 end
 
-### Core extensions
-class Object
-  def local_methods
-    (methods - Object.instance_methods).sort
-  end
-  alias :lm :local_methods
+def r
+  reload!
 end
 
-class Class
-  def class_methods
-    (methods - Class.instance_methods - Object.methods).sort
+### Core extensions
+class Object
+  def local_methods(obj = self)
+    (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  alias :cm :class_methods
 
-  def defined_methods
-    methods = {}
-
-    methods[:instance] = new.local_methods
-    methods[:class] = class_methods
-
-    methods
-  end
-  alias :dm :defined_methods
+  alias :lm :local_methods
 end
 
 ### Notify Ruby version
