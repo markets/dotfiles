@@ -18,6 +18,8 @@
   df      = diff
   cl      = clone
   lg      = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  last    = log -1 HEAD
+  rh      = reset --hard HEAD
 [push]
   default = simple
 [pull]

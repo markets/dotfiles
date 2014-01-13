@@ -1,6 +1,6 @@
 alias df='df -h' # humanize sizes
-alias free='free -m' # use MB
 alias cp='cp -i' # confirm before overwrite
+alias hi='history | tail -20'
 
 alias l='ls -laGFh'
 alias ..='cd ..'
