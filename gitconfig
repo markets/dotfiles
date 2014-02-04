@@ -9,7 +9,7 @@
   branch  = auto
   ui      = true
 [core]
-  excludesfile = /Users/markets/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [alias]
   st      = status
   ci      = commit

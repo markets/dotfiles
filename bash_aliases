@@ -2,6 +2,7 @@ alias df='df -h' # humanize sizes
 alias cp='cp -i' # confirm before overwrite
 alias hi='history | tail -20'
 alias reload!='. ~/.bash_profile'
+alias localip='ipconfig getifaddr en1'
 
 alias l='ls -laGFh'
 alias ..='cd ..'

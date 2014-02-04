@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+echo "Installing dotfiles..."
+echo
+dotfiles_dir=`pwd`
+cd "$dotfile_dir"
+git pull origin master
+echo
+
+function install {
+  ln -sf "$dotfiles_dir/bash_aliases" ~/.bash_aliases
+  ln -sf "$dotfiles_dir/bash_profile" ~/.bash_profile
+  ln -sf "$dotfiles_dir/gemrc" ~/.gemrc
+  ln -sf "$dotfiles_dir/gitconfig" ~/.gitconfig
+  ln -sf "$dotfiles_dir/gitignore_global" ~/.gitignore_global
+  ln -sf "$dotfiles_dir/gitk" ~/.gitk
+  ln -sf "$dotfiles_dir/irbrc" ~/.irbrc
+
+  source ~/.bash_profile
+
+  echo "Installation completed. Enjoy!"
+}
+
+if [ "$1" == "--force" -o "$1" == "-f" ]; then
+  install
+else
+  read -p "This will overwrite the existing dotfiles. Are you sure? (y/n) " -n 1
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    install
+  fi
+fi
+
