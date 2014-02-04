@@ -3,6 +3,8 @@ alias cp='cp -i' # confirm before overwrite
 alias hi='history | tail -20'
 alias reload!='. ~/.bash_profile'
 alias localip='ipconfig getifaddr en1'
+alias psg='ps aux | grep $1'
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to clipboard.'"
 
 alias l='ls -laGFh'
 alias ..='cd ..'

@@ -7,6 +7,11 @@ source ~/.git-completion.bash
 # load git prompt
 source ~/.git-prompt.sh
 
+# use .localrc for secret stuff that you don't want in your public, versioned repo.
+if [[ -a ~/.localrc ]]; then
+  source ~/.localrc
+fi
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
