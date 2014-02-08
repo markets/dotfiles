@@ -8,12 +8,13 @@ source ~/.git-completion.bash
 source ~/.git-prompt.sh
 
 # use .localrc for secret stuff that you don't want in your public, versioned repo.
-if [[ -a ~/.localrc ]]; then
+if [[ -e ~/.localrc ]]; then
   source ~/.localrc
 fi
 
-# rbenv
 export PATH="$HOME/.rbenv/bin:/usr/local/bin:$PATH"
+
+# rbenv
 eval "$(rbenv init -)"
 
 # ruby version via rbenv
