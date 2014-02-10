@@ -3,7 +3,6 @@
 These are some config files (git, bash, aliases, ruby, sublime text 2, ...) to set up some settings that I like it.
 
 ## Installation
-
 Run this:
 
 ```
@@ -23,5 +22,8 @@ To update it, `cd` into your local `dotfiles` folder and run again:
 ```
 script/install
 ```
+
+## Notes
+Use `~/.secrets` for stuff that you don't want to share in your public, versioned repo. It will be automatically symlinked to your `~` directory.
 
 Enjoy it!

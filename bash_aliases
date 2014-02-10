@@ -4,6 +4,10 @@ alias hi='history | tail -20'
 alias reload!='. ~/.bash_profile'
 alias localip='ipconfig getifaddr en1'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to clipboard.'"
+alias hosts='more /etc/hosts'
+
+alias c='pbcopy'
+alias p='pbpaste'
 
 alias psa='ps aux'
 alias psg='ps aux | grep $1'
@@ -14,7 +18,7 @@ alias k9='kill -9'
 alias l='ls -laGFh'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias cdb='cd -'
+alias cdd='cd -'
 
 alias tf='tail -f'
 alias tlog='tail -f log/development.log'
@@ -25,9 +29,10 @@ alias gd='git diff'
 alias gb='git branch'
 alias gs='git show'
 
-alias r='ruby'
 alias rs='rails s'
 alias rc='rails c'
+alias rg='rails g'
+alias rd='rails d'
 
 alias gemi='gem install --no-ri --no-rdoc'
 alias gemu='gem uninstall'

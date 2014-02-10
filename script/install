@@ -15,6 +15,7 @@ function install {
   ln -sf "$dotfiles_dir/gitignore_global" ~/.gitignore_global
   ln -sf "$dotfiles_dir/gitk" ~/.gitk
   ln -sf "$dotfiles_dir/irbrc" ~/.irbrc
+  ln -sf "$dotfiles_dir/rspec" ~/.rspec
 
   source ~/.bash_profile
 
