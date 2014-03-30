@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "Uninstalling dotfiles..."
+echo
+rm ~/.bash_aliases
+rm ~/.bash_profile
+rm ~/.gemrc
+rm ~/.gitconfig
+rm ~/.gitignore_global
+rm ~/.gitk
+rm ~/.irbrc
+rm ~/.rspec
+echo "Uninstalled!"

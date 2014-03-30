@@ -22,6 +22,11 @@ function ruby_version {
   rbenv version-name
 }
 
+# rails version
+function rails_version {
+  rails -v | sed 's/Rails //'
+}
+
 # git dirty
 function git_dirty {
   local status=$(git status --porcelain 2> /dev/null)
@@ -42,4 +47,4 @@ CYAN='\e[0;36m'
 RESET='\e[0m'
 
 # prompt style
-export PS1="$YELLOW\$(ruby_version)$RESET \u: \w$CYAN\$(__git_ps1)$RED\$(git_dirty)$RESET\$ "
+export PS1="$YELLOW\$(ruby_version)on$(rails_version)$RESET \u: \w$CYAN\$(__git_ps1)$RED\$(git_dirty)$RESET\$ "
