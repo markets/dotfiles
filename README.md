@@ -1,6 +1,6 @@
-# Markets dotfiles
+# Markets dotfiles [![markets/dotfiles](http://img.shields.io/badge/markets-dotfiles-blue.svg)](https://github.com/markets/dotfiles)
 
-These are some config files (git, bash, aliases, ruby, sublime text 2, ...) to set up some useful settings that I like :blue_heart:
+These are some config files (git, bash, aliases, ruby, sublime text 2, ...) to set up some useful settings that I like :ok_hand:
 
 ## Installation
 Run this:
