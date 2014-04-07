@@ -42,5 +42,8 @@ alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
 
+alias rr='rake routes'
+alias rt='rake -T --all'
+
 alias jks='jekyll server -w'
 alias jkb='jekyll build'

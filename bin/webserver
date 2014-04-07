@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'webrick'
+require 'optparse'
+
+options = {}
+
+optparse = OptionParser.new do |opts|
+  opts.banner = "Usage: webserver [options]"
+
+  options[:port] = 8000
+  opts.on( '-p', '--port PORT', 'Port Number (default 8000)' ) do |port|
+    options[:port] = port
+  end
+
+  options[:docroot] = Dir.pwd
+  opts.on( '-d', '--doc_root PATH', 'Document Root (default current dir)' ) do |docroot|
+    puts docroot
+    options[:docroot] = docroot
+  end
+
+  opts.on( '-h', '--help', 'Display help' ) do
+    puts opts
+    exit
+  end
+end
+
+optparse.parse!
+
+# run WEBrick
+server = WEBrick::HTTPServer.new(
+  Port: options[:port],
+  DocumentRoot: options[:docroot]
+)
+
+trap "INT" do
+  server.shutdown
+end
+
+server.start
