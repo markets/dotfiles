@@ -23,6 +23,9 @@ alias cdd='cd -'
 alias tf='tail -f'
 alias tlog='tail -f log/development.log'
 
+alias post='curl -i -X POST'
+alias get='curl -i -X GET'
+
 alias gst='git status'
 alias gco='git checkout'
 alias gd='git diff'
