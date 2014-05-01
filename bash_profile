@@ -14,6 +14,8 @@ fi
 
 export PATH="$HOME/workspace/dotfiles/bin:$HOME/.rbenv/bin:/usr/local/bin:$PATH"
 
+export EDITOR="subl -w"
+
 # rbenv
 eval "$(rbenv init -)"
 
