@@ -36,8 +36,8 @@ end
 alias c clear
 
 # Quick benchmarking
-# Usage: bm { rand } or quick(1000) { rand }
-def bm(repetitions = 100, &block)
+# Usage: time { rand } or time(1000) { rand }
+def time(repetitions = 100, &block)
   require 'benchmark'
   Benchmark.bmbm do |b|
     b.report { repetitions.times &block }
@@ -52,7 +52,10 @@ class Object
   alias :lm :local_methods
 
   # Print documentation
-  # Usage: ri 'Array#pop' or Array.ri or Array.ri(:sort)
+  # Usage:
+  #   ri 'Array#pop'
+  #   Array.ri
+  #   Array.ri(:sort)
   def ri(method = nil)
     unless method && method =~ /^[A-Z]/ # if class isn't specified
       klass = self.kind_of?(Class) ? name : self.class.name
