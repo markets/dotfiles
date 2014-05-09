@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Generates random alphanumeric password
+# Usage: genpass long
+
+long=${1:-8}
+cat /dev/random | LC_CTYPE=C tr -dc "[:alpha:]" | head -c $long; echo
