@@ -13,5 +13,5 @@ if [ "$1" == "master" -o "$1" == "production" ]; then
   exit 1
 fi
 
-# git branch -D $1
-# git push origin :$1
+git branch -D $1
+git push origin :$1
