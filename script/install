@@ -9,6 +9,7 @@ echo
 
 function install {
   ln -sf "$dotfiles_dir/bash_aliases" ~/.bash_aliases
+  ln -sf "$dotfiles_dir/bash_functions" ~/.bash_functions
   ln -sf "$dotfiles_dir/bash_profile" ~/.bash_profile
   ln -sf "$dotfiles_dir/gemrc" ~/.gemrc
   ln -sf "$dotfiles_dir/gitconfig" ~/.gitconfig
@@ -16,6 +17,7 @@ function install {
   ln -sf "$dotfiles_dir/gitk" ~/.gitk
   ln -sf "$dotfiles_dir/irbrc" ~/.irbrc
   ln -sf "$dotfiles_dir/rspec" ~/.rspec
+  ln -sf "$dotfiles_dir/bin" ~/.bin
 
   source ~/.bash_profile
 

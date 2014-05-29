@@ -3,6 +3,7 @@
 echo "Uninstalling dotfiles..."
 echo
 rm ~/.bash_aliases
+rm ~/.bash_functions
 rm ~/.bash_profile
 rm ~/.gemrc
 rm ~/.gitconfig
@@ -10,4 +11,5 @@ rm ~/.gitignore_global
 rm ~/.gitk
 rm ~/.irbrc
 rm ~/.rspec
+rm -rf ~/.bin
 echo "Uninstalled!"

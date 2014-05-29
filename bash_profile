@@ -1,45 +1,26 @@
-# load aliases
 source ~/.bash_aliases
+source ~/.bash_functions
 
-# load git completion
-source ~/.git-completion.bash
+if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
+  source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+fi
 
-# load git prompt
-source ~/.git-prompt.sh
+if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
+  source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+fi
 
-# use .secrets for stuff that you don't want to share in your public, versioned repo.
+# Use .secrets for stuff that you don't want to share in your public, versioned repo.
 if [[ -e ~/.secrets ]]; then
   source ~/.secrets
 fi
 
-export PATH="$HOME/workspace/dotfiles/bin:$HOME/.rbenv/bin:/usr/local/bin:$PATH"
-
+export PATH="$HOME/.bin:$HOME/.rbenv/bin:/usr/local/bin:$PATH"
 export EDITOR="subl -w"
 
-# rbenv
+# Evaluate rbenv
 eval "$(rbenv init -)"
 
-# ruby version via rbenv
-function ruby_version {
-  rbenv version-name
-}
-
-# rails version
-function rails_version {
-  rails -v | sed 's/Rails //'
-}
-
-# git dirty
-function git_dirty {
-  local status=$(git status --porcelain 2> /dev/null)
-  if [[ "$status" != "" ]]; then
-    echo '* '
-  else
-    echo ''
-  fi
-}
-
-# colors
+# Define some colors
 BLACK='\e[0;30m'
 RED='\e[0;31m'
 GREEN='\e[0;32m'
@@ -48,5 +29,5 @@ BLUE='\e[0;34m'
 CYAN='\e[0;36m'
 RESET='\e[0m'
 
-# prompt style
+# Prompt style
 export PS1="$YELLOW\$(ruby_version)on$(rails_version)$RESET \u: \w$CYAN\$(__git_ps1)$RED\$(git_dirty)$RESET\$ "
