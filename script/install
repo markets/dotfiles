@@ -17,7 +17,10 @@ function install {
   ln -sf "$dotfiles_dir/gitk" ~/.gitk
   ln -sf "$dotfiles_dir/irbrc" ~/.irbrc
   ln -sf "$dotfiles_dir/rspec" ~/.rspec
-  ln -sf "$dotfiles_dir/bin" ~/.bin
+
+  if [[ $(readlink ~/.bin) != "$dotfiles_dir/bin" ]]; then
+    ln -sf "$dotfiles_dir/bin" ~/.bin
+  fi
 
   source ~/.bash_profile
 

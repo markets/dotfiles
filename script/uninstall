@@ -11,5 +11,4 @@ rm ~/.gitignore_global
 rm ~/.gitk
 rm ~/.irbrc
 rm ~/.rspec
-rm -rf ~/.bin
 echo "Uninstalled!"
