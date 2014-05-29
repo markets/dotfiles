@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Flush all content of the local memcached server
+
+echo "flush_all" | nc 127.0.0.1 11211
