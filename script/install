@@ -8,16 +8,22 @@ git pull origin master
 echo
 
 function install {
-  ln -sf "$dotfiles_dir/bash_aliases" ~/.bash_aliases
-  ln -sf "$dotfiles_dir/bash_functions" ~/.bash_functions
-  ln -sf "$dotfiles_dir/bash_profile" ~/.bash_profile
-  ln -sf "$dotfiles_dir/gemrc" ~/.gemrc
-  ln -sf "$dotfiles_dir/gitconfig" ~/.gitconfig
-  ln -sf "$dotfiles_dir/gitignore_global" ~/.gitignore_global
-  ln -sf "$dotfiles_dir/gitk" ~/.gitk
-  ln -sf "$dotfiles_dir/irbrc" ~/.irbrc
-  ln -sf "$dotfiles_dir/rspec" ~/.rspec
+  # Bash stuff
+  ln -sf "$dotfiles_dir/bash/bash_aliases" ~/.bash_aliases
+  ln -sf "$dotfiles_dir/bash/bash_functions" ~/.bash_functions
+  ln -sf "$dotfiles_dir/bash/bash_profile" ~/.bash_profile
 
+  # Git stuff
+  ln -sf "$dotfiles_dir/git/gitconfig" ~/.gitconfig
+  ln -sf "$dotfiles_dir/git/gitignore_global" ~/.gitignore_global
+  ln -sf "$dotfiles_dir/git/gitk" ~/.gitk
+
+  # Ruby stuff
+  ln -sf "$dotfiles_dir/ruby/gemrc" ~/.gemrc
+  ln -sf "$dotfiles_dir/ruby/irbrc" ~/.irbrc
+  ln -sf "$dotfiles_dir/ruby/rspec" ~/.rspec
+
+  # Custom binaries
   if [[ $(readlink ~/.bin) != "$dotfiles_dir/bin" ]]; then
     ln -sf "$dotfiles_dir/bin" ~/.bin
   fi
