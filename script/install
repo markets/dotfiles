@@ -15,7 +15,7 @@ function install {
 
   # Git stuff
   ln -sf "$dotfiles_dir/git/gitconfig" ~/.gitconfig
-  ln -sf "$dotfiles_dir/git/gitignore_global" ~/.gitignore_global
+  ln -sf "$dotfiles_dir/git/gitignore" ~/.gitignore
   ln -sf "$dotfiles_dir/git/gitk" ~/.gitk
 
   # Ruby stuff

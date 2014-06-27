@@ -9,7 +9,7 @@
   branch  = auto
   ui      = true
 [core]
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore
 [alias]
   st      = status
   ci      = commit
@@ -19,7 +19,8 @@
   cl      = clone
   lg      = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   last    = log -1 HEAD
-  rh      = reset --hard HEAD
+  tags    = tag -l
+  remotes = remote -v
 [push]
   default = simple
 [pull]

@@ -1,12 +1,15 @@
-function ruby_version {
+function ruby_version
+{
   rbenv version-name
 }
 
-function rails_version {
+function rails_version
+{
   rails -v | sed 's/Rails //'
 }
 
-function git_dirty {
+function git_dirty
+{
   local status=$(git status --porcelain 2> /dev/null)
 
   if [[ "$status" != "" ]]; then
@@ -16,7 +19,13 @@ function git_dirty {
   fi
 }
 
-function mkcd {
+function mkcd
+{
   dir=$1;
   mkdir -p $dir && cd $dir;
+}
+
+function ips
+{
+  ifconfig | grep "inet " | awk '{ print $2 }'
 }
