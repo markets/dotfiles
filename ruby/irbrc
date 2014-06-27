@@ -35,6 +35,11 @@ def clear
 end
 alias c clear
 
+def edit(path = '.')
+  system "subl #{path}"
+end
+alias subl edit
+
 # Quick benchmarking
 # Usage: time { rand } or time(1000) { rand }
 def time(repetitions = 100, &block)
