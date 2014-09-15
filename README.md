@@ -3,6 +3,7 @@
 These are some config files (git, bash, aliases, ruby, sublime text, ...) and some custom scripts to set up a useful settings and tools that I like and I use every day :ok_hand:
 
 ## Installation
+
 Run this:
 
 ```
@@ -28,14 +29,17 @@ You can remove :boom: this configuration with:
 ```
 script/uninstall
 ```
+
 ## Prompt
-Includes `Rails` version:
+
+Includes current Ruby version and Git branch/status:
 
 ```
-2.0.0-p353on4.0.4 markets: ~/workspace/dotfiles (master)* $
+2.1.0 markets: ~/workspace/dotfiles (master)* $
 ```
 
 ## Notes
+
 Use `~/.secrets` for stuff that you don't want to share in your public, versioned repo. It will be automatically symlinked to your `~` directory.
 
 Enjoy :metal:
