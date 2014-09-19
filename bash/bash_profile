@@ -15,7 +15,10 @@ if [[ -e ~/.secrets ]]; then
 fi
 
 export PATH="$HOME/.bin:$HOME/.rbenv/bin:/usr/local/bin:$PATH"
+
 export EDITOR="subl -w"
+
+export GREP_OPTIONS='--color=auto'
 
 # Evaluate rbenv
 eval "$(rbenv init -)"
