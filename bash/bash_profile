@@ -9,12 +9,19 @@ if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
   source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 fi
 
+if [ -f $(brew --prefix nvm)/nvm.sh ]; then
+  source $(brew --prefix nvm)/nvm.sh
+fi
+
 # Use .secrets for stuff that you don't want to share in your public, versioned repo.
 if [[ -e ~/.secrets ]]; then
   source ~/.secrets
 fi
 
 export PATH="$HOME/.bin:$HOME/.rbenv/bin:/usr/local/bin:$PATH"
+
+export GOPATH=$HOME/workspace/golang
+export PATH=$PATH:$GOPATH/bin
 
 export EDITOR="subl -w"
 
