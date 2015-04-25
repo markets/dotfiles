@@ -1,8 +1,8 @@
 [user]
-  name    = Fabrizio D'Urso
-  email   = skywalkerdevapp@gmail.com
+  name    = your_full_name
+  email   = your_email_address
 [github]
-  user    = SkyWDev
+  user    = your_GitHub_username
 [color]
   diff    = auto
   status  = auto
