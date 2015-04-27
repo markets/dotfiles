@@ -1,15 +1,16 @@
 [user]
-  name    = your_full_name
-  email   = your_email_address
-[github]
-  user    = your_GitHub_username
+  name    = GIT_AUTHOR_NAME
+  email   = GIT_AUTHOR_EMAIL
+
 [color]
   diff    = auto
   status  = auto
   branch  = auto
   ui      = true
+
 [core]
   excludesfile = ~/.gitignore
+
 [alias]
   st      = status
   ci      = commit
@@ -21,7 +22,15 @@
   last    = log -1 HEAD
   tags    = tag -l
   remotes = remote -v
+
 [push]
   default = simple
+
 [pull]
   default = simple
+
+[url "https://github.com/"]
+  insteadOf = gh:
+
+[url "https://gist.github.com/"]
+  insteadOf = gist:

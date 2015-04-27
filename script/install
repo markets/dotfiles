@@ -17,6 +17,7 @@ function install {
   ln -sf "$dotfiles_dir/git/gitconfig" ~/.gitconfig
   ln -sf "$dotfiles_dir/git/gitignore" ~/.gitignore
   ln -sf "$dotfiles_dir/git/gitk" ~/.gitk
+  git_username_setup
 
   # Ruby stuff
   ln -sf "$dotfiles_dir/ruby/gemrc" ~/.gemrc
@@ -31,6 +32,20 @@ function install {
   source ~/.bash_profile
 
   echo "Installation completed. Enjoy!"
+}
+
+function git_username_setup {
+  if grep -q "GIT_AUTHOR_NAME" ~/.gitconfig; then
+    read -e -p "What is your Git author name?" git_author_name
+
+    sed -i -e "s/GIT_AUTHOR_NAME/$git_author_name/g" ~/.gitconfig
+  fi
+
+  if grep -q "GIT_AUTHOR_EMAIL" ~/.gitconfig; then
+    read -e -p "What is your Git author email?" git_author_email
+
+    sed -i -e "s/GIT_AUTHOR_EMAIL/$git_author_email/g" ~/.gitconfig
+  fi
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
