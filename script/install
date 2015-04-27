@@ -14,7 +14,7 @@ function install {
   ln -sf "$dotfiles_dir/bash/bash_profile" ~/.bash_profile
   if [ ! -f ~/.secrets ]; then
     cp "$dotfiles_dir/bash/secrets.example" ~/.secrets
-    git_username_setup
+    interactive_git_credentials
   fi
 
   # Git stuff
@@ -37,18 +37,12 @@ function install {
   echo "Installation completed. Enjoy!"
 }
 
-function git_username_setup {
-  if grep -q "YOUR_GIT_AUTHOR_NAME" ~/.secrets; then
-    read -e -p "What is your Git author name?" git_author_name
+function interactive_git_credentials {
+  read -e -p "What is your Git author name?" git_author_name
+  sed -i -e "s/YOUR_GIT_AUTHOR_NAME/$git_author_name/g" ~/.secrets
 
-    sed -i -e "s/YOUR_GIT_AUTHOR_NAME/$git_author_name/g" ~/.secrets
-  fi
-
-  if grep -q "YOUR_GIT_AUTHOR_EMAIL" ~/.secrets; then
-    read -e -p "What is your Git author email?" git_author_email
-
-    sed -i -e "s/YOUR_GIT_AUTHOR_EMAIL/$git_author_email/g" ~/.secrets
-  fi
+  read -e -p "What is your Git author email?" git_author_email
+  sed -i -e "s/YOUR_GIT_AUTHOR_EMAIL/$git_author_email/g" ~/.secrets
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

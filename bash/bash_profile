@@ -19,8 +19,7 @@ if [[ -e ~/.secrets ]]; then
 fi
 
 export PATH="$HOME/.bin:$HOME/.rbenv/bin:/usr/local/bin:$PATH"
-
-export GOPATH=$HOME/workspace/golang
+export GOPATH=$PROJECTS/golang
 export PATH=$PATH:$GOPATH/bin
 
 export EDITOR="subl -w"
