@@ -1,12 +1,24 @@
 {
-  "color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
-  "theme": "Soda Dark.sublime-theme",
-  "font_size": 12.0,
+  "margin": 10,
   "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true,
+  "font_size": 15.0,
+  "word_wrap": true,
   "ignored_packages":
   [
     "Vintage"
-  ]
+  ],
+  "index_files": true,
+  "line_padding_top": 3,
+  "caret_extra_top": 3,
+  "highlight_line": true,
+  "caret_style": "phase",
+  "caret_extra_bottom": 3,
+  "line_padding_bottom": 1,
+  "font_face": "Ubuntu Mono",
+  "highlight_modified_tabs": true,
+  "translate_tabs_to_spaces": true,
+  "overlay_scroll_bars": "enabled",
+  "theme": "Spacegray.sublime-theme",
+  "trim_trailing_white_space_on_save": true,
+  "color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme"
 }
