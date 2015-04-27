@@ -7,7 +7,7 @@ rm ~/.bash_functions
 rm ~/.bash_profile
 rm ~/.gemrc
 rm ~/.gitconfig
-rm ~/.gitignore_global
+rm ~/.gitignore
 rm ~/.gitk
 rm ~/.irbrc
 rm ~/.rspec
