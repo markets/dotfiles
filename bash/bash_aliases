@@ -12,6 +12,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias cdd='cd -'
 
+alias projects="cd $PROJECTS"
+
 alias numfiles='echo $(ls -1 | wc -l)'
 
 alias psa='ps aux'

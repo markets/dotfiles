@@ -3,8 +3,8 @@
   "folder_exclude_patterns": [
     ".git"
   ],
-  "font_face": "Ubuntu Mono",
-  "font_size": 13,
+  "font_face": "Monaco",
+  "font_size": 12,
   "highlight_line": true,
   "highlight_modified_tabs": true,
   "ignored_packages": [

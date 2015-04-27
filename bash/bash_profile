@@ -28,7 +28,7 @@ export EDITOR="subl -w"
 export GREP_OPTIONS='--color=auto'
 
 export HISTCONTROL=ignoredups:erasedups # no duplicate entries
-shopt -s histappend                     # append to history, don't overwrite it
+shopt -s histappend # append to history, don't overwrite it
 export HISTSIZE=5000
 export HISTFILESIZE=5000
 
