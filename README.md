@@ -1,6 +1,6 @@
-# Markets dotfiles [![markets/dotfiles](http://img.shields.io/badge/markets-dotfiles-blue.svg)](https://github.com/markets/dotfiles)
+# Markets dotfiles [![markets/dotfiles](http://img.shields.io/badge/good-stuff-blue.svg)](https://github.com/markets/dotfiles)
 
-These are some config files (git, bash, aliases, ruby, sublime text, ...) and some custom scripts to set up a useful settings and tools that I like and I use every day :ok_hand:
+This repository contains some configuration files (Git, Bash, aliases, Ruby, Sublime Text, ...) and some custom scripts/tools to bootstrap a friendly development environment :ok_hand:
 
 ## Installation
 
@@ -18,7 +18,7 @@ Alternatively, to install it avoiding the confirmation prompt:
 script/install -f # or --force
 ```
 
-To update it, `cd` into your local `dotfiles` folder and run again:
+To update, `cd` into your local `dotfiles` folder and run again:
 
 ```
 script/install
@@ -35,11 +35,13 @@ script/uninstall
 Includes current Ruby version and Git branch/status:
 
 ```
-[2.1.2] markets: ~/workspace/dotfiles (master)* $
+[2.2.0] markets: ~/workspace/dotfiles (master)* $
 ```
 
-## Notes
+## Secrets
 
 Use `~/.secrets` for stuff that you don't want to share in your public, versioned repo. It will be automatically symlinked to your `~` directory.
+
+Git credentials are configured via the `~/.secrets` file.
 
 Enjoy :metal:

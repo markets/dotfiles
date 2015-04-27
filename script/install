@@ -4,7 +4,7 @@ echo "Installing dotfiles..."
 echo
 dotfiles_dir=`pwd`
 cd "$dotfile_dir"
-# git pull origin master
+git pull origin master
 echo
 
 function install {
