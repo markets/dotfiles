@@ -32,6 +32,10 @@ function install {
     ln -sf "$dotfiles_dir/bin" ~/.bin
   fi
 
+  # Sublime Text
+  sublime_dir=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+  cp -r "$dotfiles_dir/sublime-text/" "$sublime_dir"
+
   source ~/.bash_profile
 
   echo "Installation completed. Enjoy!"

@@ -2,5 +2,5 @@
   <content><![CDATA[<% $1 %>$0]]></content>
   <tabTrigger>e</tabTrigger>
   <scope>text.html.ruby</scope>
-  <description>erb <% %></description>
+  <description>ERB exec</description>
 </snippet>

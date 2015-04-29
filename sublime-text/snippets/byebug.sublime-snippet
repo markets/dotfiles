@@ -1,5 +1,5 @@
 <snippet>
   <content><![CDATA[require 'byebug'; byebug]]></content>
   <tabTrigger>bye</tabTrigger>
-  <description>debugger (Ruby 2)</description>
+  <description>Debugger (Ruby 2)</description>
 </snippet>
