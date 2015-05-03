@@ -34,7 +34,9 @@ function install {
 
   # Sublime Text
   sublime_dir=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
-  cp -r "$dotfiles_dir/sublime-text/" "$sublime_dir"
+  if [ ! -d "$sublime_dir" ]; then
+    cp -r "$dotfiles_dir/sublime-text/" "$sublime_dir"
+  fi
 
   source ~/.bash_profile
 
