@@ -5,6 +5,7 @@ echo
 rm ~/.bash_aliases
 rm ~/.bash_functions
 rm ~/.bash_profile
+rm ~/.inputrc
 rm ~/.gemrc
 rm ~/.gitconfig
 rm ~/.gitignore

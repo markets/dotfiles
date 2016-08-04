@@ -12,6 +12,7 @@ function install {
   ln -sf "$dotfiles_dir/bash/bash_aliases" ~/.bash_aliases
   ln -sf "$dotfiles_dir/bash/bash_functions" ~/.bash_functions
   ln -sf "$dotfiles_dir/bash/bash_profile" ~/.bash_profile
+  ln -sf "$dotfiles_dir/bash/inputrc" ~/.inputrc
   if [ ! -f ~/.secrets ]; then
     cp "$dotfiles_dir/bash/secrets.example" ~/.secrets
     interactive_git_credentials
