@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Usage: rspec && notifyme
+
+osascript -e 'display notification "🏃⌛🔊 " with title "Back to work!"'
