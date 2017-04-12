@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-# Undo your last commit
+# Undo your last commit by reseting the index but not the working tree
 
-git reset --soft HEAD^
+git reset --mixed HEAD^

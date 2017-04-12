@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Clean up branches
+
+echo "Pruning remote branches..."
+git remote prune origin
+echo ""
+
+echo "Removing local merged branches..."
+git branch --merged | grep -v "\*\|master\|develop" | xargs -n 1 git branch -d
