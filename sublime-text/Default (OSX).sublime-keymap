@@ -1,3 +1,0 @@
-[
-  { "keys": ["command+shift+i"], "command": "reindent", "args": {"single_line": false} }
-]

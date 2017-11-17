@@ -1,5 +1,0 @@
-<snippet>
-  <content><![CDATA[require 'debugger'; debugger]]></content>
-  <tabTrigger>dbg</tabTrigger>
-  <description>Debugger</description>
-</snippet>
