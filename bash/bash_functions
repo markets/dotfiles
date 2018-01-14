@@ -25,15 +25,12 @@ function mkcd
   mkdir -p $dir && cd $dir;
 }
 
-function ips
-{
-  ifconfig | grep "inet " | awk '{ print $2 }'
-}
-
+# Set title for current tab
 function tabname {
   printf "\e]1;$1\a"
 }
 
+# Set title for current window
 function winname {
   printf "\e]2;$1\a"
 }

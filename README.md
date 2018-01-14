@@ -1,6 +1,6 @@
-# Markets dotfiles [![markets/dotfiles](http://img.shields.io/badge/good-stuff-blue.svg)](https://github.com/markets/dotfiles)
+# .dotfiles [![markets/dotfiles](https://img.shields.io/badge/good-stuff-blue.svg?style=flat-square)](https://github.com/markets/dotfiles)
 
-This repository contains some configuration files (Git, Bash, aliases, Ruby, Sublime Text, ...) and some custom scripts/tools to bootstrap a friendly development environment :ok_hand:
+This repository contains some configuration files (Git, Bash, aliases, Ruby, Sublime Text, Node, ...) and some custom scripts and tools to bootstrap a friendly macOS development environment :ok_hand:
 
 ## Installation
 
@@ -43,5 +43,7 @@ Includes current Ruby version and Git branch/status:
 Use `~/.secrets` for stuff that you don't want to share in your public, versioned repo. It will be automatically symlinked to your `~` directory.
 
 Git credentials are configured via the `~/.secrets` file.
+
+---
 
 Enjoy :metal:

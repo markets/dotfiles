@@ -1,50 +1,52 @@
 source ~/.bash_aliases
 source ~/.bash_functions
 
+# Git completion
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
   source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 fi
 
+# Git prompt
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
   source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 fi
 
-# Use .secrets for stuff that you don't want to share in your public, versioned repo.
+# Use .secrets for stuff that you don't want to share in your public, versioned repo
 if [[ -e ~/.secrets ]]; then
   source ~/.secrets
 fi
 
+# PATH
 export PATH="$HOME/.bin:$HOME/.rbenv/bin:/usr/local/bin:$PATH"
 export GOPATH=$PROJECTS/golang
 export PATH=$PATH:$GOPATH/bin
 
+# Main Editor
 export EDITOR="subl -w"
 
+# Grep settings
 export GREP_OPTIONS='--color=auto'
 
+# Bash history
 export HISTCONTROL=ignoredups:erasedups # no duplicate entries
 shopt -s histappend # append to history, don't overwrite it
 export HISTSIZE=5000
 export HISTFILESIZE=5000
 
-# Evaluate rbenv
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# Rbenv
 eval "$(rbenv init -)"
 
-# Regular colors
-RED="\[\033[0;31m\]"
-GREEN="\[\033[0;32m\]"
-YELLOW="\[\033[0;33m\]"
-BLUE="\[\033[0;34m\]"
-CYAN="\[\033[0;36m\]"
+# Colors
 WHITE="\[\033[0;37m\]"
-
-# Emphasized (bolded) colors
-BRED="\[\033[1;31m\]"
-BGREEN="\[\033[1;32m\]"
-BYELLOW="\[\033[1;33m\]"
-BBLUE="\[\033[1;34m\]"
-BCYAN="\[\033[1;36m\]"
-BWHITE="\[\033[1;37m\]"
+BOLD_YELLOW="\[\033[1;33m\]"
+BOLD_WHITE="\[\033[1;37m\]"
+BOLD_CYAN="\[\033[1;36m\]"
+BOLD_RED="\[\033[1;31m\]"
 
 # Prompt style
-export PS1="$BYELLOW[\$(ruby_version)]$BWHITE \u: \w$BCYAN\$(__git_ps1)$BRED\$(git_dirty)$WHITE\$ "
+export PS1="$BOLD_YELLOW[\$(ruby_version)]$BOLD_WHITE \u: \w$BOLD_CYAN\$(__git_ps1)$BOLD_RED\$(git_dirty)$WHITE\$ "

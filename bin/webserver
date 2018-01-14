@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
 require 'webrick'
 require 'optparse'
 
@@ -16,7 +15,6 @@ optparse = OptionParser.new do |opts|
 
   options[:docroot] = Dir.pwd
   opts.on( '-d', '--doc_root PATH', 'Document Root (default current dir)' ) do |docroot|
-    puts docroot
     options[:docroot] = docroot
   end
 
@@ -28,7 +26,6 @@ end
 
 optparse.parse!
 
-# run WEBrick
 server = WEBrick::HTTPServer.new(
   Port: options[:port],
   DocumentRoot: options[:docroot]
