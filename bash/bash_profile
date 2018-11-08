@@ -21,6 +21,9 @@ export PATH="$HOME/.bin:$HOME/.rbenv/bin:/usr/local/bin:$PATH"
 export GOPATH=$PROJECTS/golang
 export PATH=$PATH:$GOPATH/bin
 
+# Language
+export LANG="en_US.UTF-8"
+
 # Main Editor
 export EDITOR="subl -w"
 
