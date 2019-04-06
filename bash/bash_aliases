@@ -52,7 +52,6 @@ alias chrome="open -a google\ chrome"
 alias safari="open -a safari"
 alias firefox="open -a firefox"
 alias skype='open -a Skype'
-alias mou='open -a Mou'
 
 # Clipboard
 alias c='pbcopy'
