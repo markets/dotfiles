@@ -4,7 +4,6 @@
 *.rbc
 *.sassc
 .sass-cache
-.rspec
 .powrc
 /.bundle
 /vendor/bundle
