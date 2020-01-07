@@ -1,15 +1,12 @@
-function ruby_version
-{
+function ruby_version {
   rbenv version-name
 }
 
-function rails_version
-{
+function rails_version {
   rails -v | sed 's/Rails //'
 }
 
-function git_dirty
-{
+function git_dirty {
   local status=$(git status --porcelain 2> /dev/null)
 
   if [[ "$status" != "" ]]; then
@@ -19,20 +16,9 @@ function git_dirty
   fi
 }
 
-function mkcd
-{
+function mkcd {
   dir=$1;
   mkdir -p $dir && cd $dir;
-}
-
-# Set title for current tab
-function tabname {
-  printf "\e]1;$1\a"
-}
-
-# Set title for current window
-function winname {
-  printf "\e]2;$1\a"
 }
 
 function hgrep {

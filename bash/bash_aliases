@@ -62,6 +62,7 @@ alias devlog='tail -f log/development.log'
 
 alias post='curl -i -X POST'
 alias get='curl -i -X GET'
+alias download='curl -O $1'
 
 # Git
 alias gst='git status'
