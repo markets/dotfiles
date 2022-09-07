@@ -86,13 +86,13 @@ alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
 
-alias rr='bundle exec rake routes'
+alias rr='bundle exec rails routes'
 alias rt='bundle exec rake -T --all'
 
-alias jks='jekyll server -w'
-alias jkb='jekyll build'
+alias jk='bundle exec jekyll server -w'
+alias mm='bundle exec middleman server'
 
 alias ni='npm install'
-alias nu='npm uninstall'
-alias nup='npm update'
+alias nu='npm update'
 alias yi='yarn install'
+alias yu='yarn upgrade'
