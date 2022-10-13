@@ -78,7 +78,7 @@ alias rc='rails c'
 alias rg='rails g'
 alias rd='rails d'
 
-alias gemi='gem install --no-ri --no-rdoc'
+alias gemi='gem install'
 alias gemu='gem uninstall'
 
 alias b='bundle'
