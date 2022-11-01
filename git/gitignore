@@ -13,6 +13,7 @@
 /public/system/*
 /public/uploads/*
 **.orig
+.byebug_history
 
 # rcov generated
 coverage
@@ -25,29 +26,8 @@ rdoc
 doc
 .yardoc
 
-# jeweler generated
-pkg
-
-# for netbeans
-nbproject/*
-
-# For MacOS:
+# For MacOS
 .DS_Store
 
-# For TextMate
-#*.tmproj
-#tmtags
-
-# For emacs:
-#*~
-#\#*
-#.\#*
-
-# For vim:
-#*.swp
-
-# For redcar:
-#.redcar
-
-# For rubinius:
-#*.rbc
+# For vim
+*.swp

@@ -24,3 +24,8 @@ function mkcd {
 function hgrep {
   cat ~/.bash_history | grep $1
 }
+
+function git_release {
+  version=$1;
+  git tag v${version} && git push origin --tags
+}
