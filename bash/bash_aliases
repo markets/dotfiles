@@ -67,6 +67,7 @@ alias download='curl -O $1'
 # Git
 alias gst='git status'
 alias gco='git checkout'
+alias gp='git pull'
 alias gd='git diff'
 alias gb='git branch'
 alias gs='git show'
