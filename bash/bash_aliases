@@ -1,11 +1,13 @@
 # Reload current shell
 alias reload='source ~/.bash_profile'
 
+# Exit
 alias q='exit'
 
 # Be polite
 alias please='sudo'
 
+# History
 alias h='history'
 alias hi='history | tail -20'
 
@@ -15,15 +17,18 @@ alias ...='cd ../..'
 alias cdd='cd -'
 alias projects='cd $PROJECTS'
 
+# List
 alias l='ls -laGFh'
 alias numfiles='echo $(ls -1 | wc -l)'
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+# Processes
 alias psa='ps aux'
 alias psg='ps aux | grep $1'
 
+# Kill
 alias ka9='killall -9'
 alias k9='kill -9'
 
@@ -44,6 +49,7 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 
+# Dates
 alias week='date +%V'
 alias day='date +%d'
 
@@ -51,15 +57,17 @@ alias day='date +%d'
 alias chrome="open -a google\ chrome"
 alias safari="open -a safari"
 alias firefox="open -a firefox"
-alias skype='open -a Skype'
+alias spotify="open -a spotify"
 
 # Clipboard
 alias c='pbcopy'
 alias p='pbpaste'
 
+# Logs
 alias tf='tail -f'
 alias devlog='tail -f log/development.log'
 
+# Requests
 alias post='curl -i -X POST'
 alias get='curl -i -X GET'
 alias download='curl -O $1'
@@ -73,26 +81,29 @@ alias gb='git branch'
 alias gs='git show'
 alias gcl='git clone'
 
-alias rb='ruby'
-alias rs='rails s'
-alias rc='rails c'
-alias rg='rails g'
-alias rd='rails d'
+# Rails
+alias rs='bundle exec rails server'
+alias rc='bundle exec rails console'
+alias rg='bundle exec rails generate'
+alias rd='bundle exec rails destroy'
+alias rr='bundle exec rails routes'
+alias rt='bundle exec rake -T --all'
 
+# RubyGems
 alias gemi='gem install'
 alias gemu='gem uninstall'
 
+# Bundler
 alias b='bundle'
 alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
 
-alias rr='bundle exec rails routes'
-alias rt='bundle exec rake -T --all'
-
+# SSG
 alias jk='bundle exec jekyll server -w'
 alias mm='bundle exec middleman server'
 
+# Node
 alias ni='npm install'
 alias nu='npm update'
 alias yi='yarn install'
