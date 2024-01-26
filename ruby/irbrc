@@ -19,7 +19,7 @@ IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-# Custom methods and aliases
+# Custom methods
 alias q exit
 
 def ls
@@ -30,18 +30,9 @@ def r
   reload!
 end
 
-def clear
-  system 'clear'
-end
-alias c clear
-
-def edit(path = '.')
-  system "subl #{path}"
-end
-alias subl edit
-
 # Quick benchmarking
-# Usage: time { rand } or time(1000) { rand }
+# Usage:
+#   time { rand } or time(1000) { rand }
 def time(repetitions = 100, &block)
   require 'benchmark'
   Benchmark.bmbm do |b|
