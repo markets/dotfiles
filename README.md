@@ -35,7 +35,7 @@ script/uninstall
 Includes current Ruby version and Git branch/status:
 
 ```
-[2.2.0] markets: ~/workspace/dotfiles (master)* $
+[3.3.0] markets: ~/workspace/dotfiles (master)* $
 ```
 
 ## Secrets
